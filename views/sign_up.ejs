@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HELPING HAND</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+    </head>
+    <body>
+        <div class="ui inverted menu">
+            <div class="header item">
+                Helping Hand
+            </div>
+            <a class="item" href="/">
+                Home
+            </a>
+            <a class="item" href="/sign_in">
+                Sign in
+            </a>
+            <a class="active item" href="/sign_up">
+                Sign up
+            </a>
+            <a class="item" href="/">
+                Log out
+            </a>
+        </div>
+        
+        <form action="/account" method="POST" class="ui form">
+            <div class="field">
+                <input type="text" name="post[username]" placeholder="User name" required>
+            </div>
+    
+            <div class="field">
+                <input type="text" name="post[password]" placeholder="Password" required>
+            </div>
+
+            <div class="field">
+                <input type="text" name="post[name]" placeholder="Name" required>
+            </div>
+
+            <div class="field">
+                <input type="text" name="post[position]" placeholder="Student or Host" required>
+            </div>
+
+            <div class="field">
+                <input type="text" name="post[location]" placeholder="Prefered Loaction" required>
+            </div>
+    
+            <div class="field">
+                <textarea name="post[description]" required placeholder="Description"></textarea>
+            </div>
+            <button class="ui basic dark button">Submit</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HELPING HAND</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css" rel="stylesheet">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
+    </head>
+    <body>
+        <div class="ui inverted menu">
+            <div class="header item">
+                Helping Hand
+            </div>
+            <a class="active item" href="/">
+                Home
+            </a>
+            <a class="item" href="/sign_in">
+                Sign in
+            </a>
+            <a class="item" href="/sign_up">
+                Sign up
+            </a>
+            <a class="item" href="/" >
+                Log out
+            </a>
+        </div>
+        <div class="ui main text container">
+            <div class="ui top attached segment">
+                <div class="ui divided items">
+                    <% posts.forEach(function(user) {%>
+                        <div class="item">
+                            <div class="content">
+                                <div class="header"><%= user.name %></div>
+                                <div class="description"><%= user.position %></div>
+                                <div class="description"><%= user.location %></div>
+                                <div class="description"><%= user.description %></div>
+                            </div>
+                        </div>
+                    <% }); %>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
